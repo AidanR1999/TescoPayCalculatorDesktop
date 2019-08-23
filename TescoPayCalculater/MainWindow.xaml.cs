@@ -25,6 +25,7 @@ namespace TescoPayCalculater
             InitializeComponent();
         }
 
+        //gets values from window and converts them to doubles
         public Logic GetValues(Logic l)
         {
             l.HourlyPay = Helper.ToDoubleDefaultZero(txtHourly.Text);
@@ -36,34 +37,44 @@ namespace TescoPayCalculater
             return l;
         }
 
+        //displays answer to user
         public void DisplayOutput(double pay)
         {
             lblAnswer.Content = "£" + Math.Round(pay, 2);
         }
 
+        //on calc weekly clicked
         private void CmdCalcWeekly_Click(object sender, RoutedEventArgs e)
         {
+            //get values
             Logic l = new Logic();
             l = GetValues(l);
 
+            //calculate answer and display
             var pay = l.CalcWeeklyPay();
             DisplayOutput(pay);
         }
 
+        //on calc monthly clicked
         private void CmdCalcMonth_Click(object sender, RoutedEventArgs e)
         {
+            //get values
             Logic l = new Logic();
             l = GetValues(l);
 
+            //calculate answer and display
             var pay = l.CalcMonthlyPay();
             DisplayOutput(pay);
         }
 
+        //on calc annual clicked
         private void CmdCalcAnnual_Click(object sender, RoutedEventArgs e)
         {
+            //get values
             Logic l = new Logic();
             l = GetValues(l);
 
+            //calculate answer and display
             var pay = l.CalcAnnualPay();
             DisplayOutput(pay);
         }

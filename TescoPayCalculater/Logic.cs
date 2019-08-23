@@ -21,6 +21,7 @@ namespace TescoPayCalculater
         public double OverStandHours { get; set; }
         public double OverPremHours { get; set; }
 
+        //premium rate of pay (multiplication)
         private const double _premiumRate = 1.25;
 
         //constructors

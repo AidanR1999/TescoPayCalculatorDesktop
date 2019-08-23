@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TescoPayCalculater
 {
+    //class where calculation logic is kept
     public class Logic
     {
         //hourly pay
@@ -20,10 +21,17 @@ namespace TescoPayCalculater
         public double OverStandHours { get; set; }
         public double OverPremHours { get; set; }
 
-        private const double PREMIUM_RATE = 1.25;
+        private const double _premiumRate = 1.25;
 
         //constructors
-        public Logic() { }
+        public Logic()
+        {
+            HourlyPay = 0.00;
+            WeekStandHours = 0.00;
+            WeekPremHours = 0.00;
+            OverStandHours = 0.00;
+            OverPremHours = 0.00;
+        }
         public Logic(double hourlyPay, double weekStandHours, double weekPremHours, double overStandHours, double overPremHours)
         {
             HourlyPay = hourlyPay;
@@ -40,7 +48,7 @@ namespace TescoPayCalculater
             var pay = HourlyPay * (WeekStandHours + OverStandHours);
 
             //add premium pay
-            pay += (HourlyPay * PREMIUM_RATE) * (WeekPremHours + OverPremHours);
+            pay += (HourlyPay * _premiumRate) * (WeekPremHours + OverPremHours);
 
             return pay;
         }
@@ -50,12 +58,12 @@ namespace TescoPayCalculater
         {
             //find standard pay
             var pay = HourlyPay * WeekStandHours;
-            pay += (HourlyPay * PREMIUM_RATE) * WeekPremHours;
+            pay += (HourlyPay * _premiumRate) * WeekPremHours;
             pay *= 4;
 
             //add overtime pay
             pay += HourlyPay * OverStandHours;
-            pay += (HourlyPay * PREMIUM_RATE) * OverPremHours;
+            pay += (HourlyPay * _premiumRate) * OverPremHours;
 
             return pay;
         }

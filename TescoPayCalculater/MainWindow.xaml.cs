@@ -27,19 +27,12 @@ namespace TescoPayCalculater
 
         public Logic GetValues(Logic l)
         {
-            try
-            {
-                l.HourlyPay = Convert.ToDouble(txtHourly.Text);
-                l.WeekStandHours = Convert.ToDouble(txtWeeklyStand.Text);
-                l.WeekPremHours = Convert.ToDouble(txtWeeklyPrem.Text);
-                l.OverStandHours = Convert.ToDouble(txtOverStand.Text);
-                l.OverPremHours = Convert.ToDouble(txtOverPrem.Text);
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-            
+            l.HourlyPay = Helper.ToDoubleDefaultZero(txtHourly.Text);
+            l.WeekStandHours = Helper.ToDoubleDefaultZero(txtWeeklyStand.Text);
+            l.WeekPremHours = Helper.ToDoubleDefaultZero(txtWeeklyPrem.Text);
+            l.OverStandHours = Helper.ToDoubleDefaultZero(txtOverStand.Text);
+            l.OverPremHours = Helper.ToDoubleDefaultZero(txtOverPrem.Text);
+
             return l;
         }
 

@@ -10,17 +10,17 @@
         <Image x:Name="imgLogo" Source="Images/logo.png" HorizontalAlignment="Left" Height="119" Margin="197,10,0,0" VerticalAlignment="Top" Width="340" Stretch="Fill"/>
         <Button x:Name="cmdCalcMonth" Content="Calculate Monthly Pay" HorizontalAlignment="Left" Margin="566,239,0,0" VerticalAlignment="Top" Width="128" Click="CmdCalcMonth_Click"/>
         <Button x:Name="cmdCalcAnnual" Content="Calculate Annual Pay" HorizontalAlignment="Left" Margin="566,319,0,0" VerticalAlignment="Top" Width="128" Click="CmdCalcAnnual_Click"/>
-        <TextBox x:Name="txtWeeklyStand" HorizontalAlignment="Left" Height="23" Margin="56,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting"/>
+        <TextBox x:Name="txtWeeklyStand" HorizontalAlignment="Left" Height="23" Margin="56,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting" Text="0"/>
         <Label Content="Weekly Standard-Rate Hours:" HorizontalAlignment="Left" Margin="41,153,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtWeeklyPrem" HorizontalAlignment="Left" Height="23" Margin="56,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting"/>
+        <TextBox x:Name="txtWeeklyPrem" HorizontalAlignment="Left" Height="23" Margin="56,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting" Text="0"/>
         <Label Content="Weekly Premium-Rate Hours:" HorizontalAlignment="Left" Margin="41,236,0,0" VerticalAlignment="Top"/>
         <Button x:Name="cmdCalcWeekly" Content="Calculate Weekly Pay" HorizontalAlignment="Left" Margin="566,162,0,0" VerticalAlignment="Top" Width="128" Click="CmdCalcWeekly_Click"/>
-        <TextBox x:Name="txtHourly" HorizontalAlignment="Left" Height="23" Margin="56,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting"/>
+        <TextBox x:Name="txtHourly" HorizontalAlignment="Left" Height="23" Margin="56,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting" Text="0"/>
         <Label Content="Hourly Pay:" HorizontalAlignment="Left" Margin="41,46,0,0" VerticalAlignment="Top"/>
         <Label Content="£" HorizontalAlignment="Left" Margin="35,72,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtOverStand" HorizontalAlignment="Left" Height="23" Margin="303,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting"/>
+        <TextBox x:Name="txtOverStand" HorizontalAlignment="Left" Height="23" Margin="303,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting" Text="0"/>
         <Label Content="Overtime Standard-Rate Hours:" HorizontalAlignment="Left" Margin="288,161,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtOverPrem" HorizontalAlignment="Left" Height="23" Margin="303,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting"/>
+        <TextBox x:Name="txtOverPrem" HorizontalAlignment="Left" Height="23" Margin="303,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Cursor="AppStarting" Text="0"/>
         <Label Content="Overtime Premium-Rate Hours:" HorizontalAlignment="Left" Margin="288,244,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblAnswer" Content="" HorizontalAlignment="Left" Margin="374,367,0,0" VerticalAlignment="Top"/>
 
